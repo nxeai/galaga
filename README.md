@@ -1,66 +1,81 @@
 # Galaga
 
-Galaga is a user-owned, version-controlled personal operating system for Codex.
-It helps Codex build an enduring understanding of how a person works, then use
-that understanding to improve decisions and actions over time.
+Galaga is a personal operating system for Codex. I am building it to automate
+my job (startup CTO) while still staying in control.
 
-The initial user is a hands-on startup CTO. Galaga is designed around two
-output pillars:
+Galaga is named after the arcade game: work arrives in recurring waves, the
+system learns how to handle them, and the human stays in control.
 
-- **Communication:** decide what communication should happen, then act in the
-  appropriate medium.
-- **Tasks:** decide what work deserves attention, then act on committed work.
+> [!CAUTION]
+> **Do not use Galaga if you do not trust AI systems, OpenAI, Codex, or any
+> connected service with the data and actions you place in scope.** AI can be
+> wrong, misunderstand context, expose information, or take an unintended
+> action. Review the code, permissions, data, recommendations, and proposed
+> actions for yourself.
+>
+> **Use Galaga entirely at your own risk.** It is experimental and provided
+> without warranties. You are responsible for how you configure and use it and
+> for every decision or action you take based on it. I am not liable for your
+> choices, outcomes, data loss, disclosure, or other damages arising from its
+> use.
 
-Galaga runs jobs. A job may be triggered manually or on a schedule. Bootstrap
-jobs establish an initial personal model; update jobs review new evidence and
-improve it. Users can inspect, redirect, pause, or manually run the system at
-any time.
+## What it does
 
-## Repository model
+Galaga maintains three personal artifacts:
 
-Galaga separates personal artifacts from framework files:
+- `context/CONTEXT.md` for goals and relevant personal context;
+- `communication/COMMUNICATION.md` for communication judgment and writing;
+  and
+- `tasks/TASKS.md` for deciding, organizing, and executing work.
 
-- Unsuffixed pillar and context files, such as `COMMUNICATION.md`, are private,
-  user-owned artifacts intended to evolve with the user.
-- Suffixed files, such as `COMMUNICATION-SPEC.md`,
-  `COMMUNICATION-BOOTSTRAP.md`, and `COMMUNICATION-UPDATE.md`, are public
-  framework files that define desired outcomes and reusable workflows.
-- `.agents/skills/` contains thin, repo-scoped entrypoints for running Galaga
-  jobs with Codex.
-- `.galaga/` contains local runtime state and cached source material. It is
-  ignored by Git and should be safe to inspect or delete.
+At a high level, Galaga has two motions:
 
-```text
-.
-├── AGENTS.md
-├── .agents/skills/
-├── pillars/
-│   ├── communication/
-│   └── tasks/
-├── context/
-├── utilities/
-└── .galaga/          # local and gitignored
-```
+- **Init:** gather information with the user and establish the personal
+  artifacts.
+- **Loops:** periodically use new evidence and feedback to improve the
+  artifacts and help decide or act within the user's approvals.
 
-The root `AGENTS.md` is the navigation and ownership contract for agents
-working in this repository.
+The specific jobs, loops, and cadences are still being designed. This
+repository enables no schedules or external actions by itself, and the user
+can always intervene.
 
-## Status
+## Use it safely
 
-Galaga is in early product definition. The checked-in files capture the
-current product model and create a battle-testable starting point. They are
-expected to change as real usage exposes better structures and workflows.
+Create your own **private repository** using Galaga as a GitHub template, then
+clone that private repository and open it in Codex. Run the bootstrap skills
+for the domains you want, review what they learn, and choose any future job
+cadence and action permissions yourself.
 
-No scheduled jobs are activated by this repository alone. Users must choose
-sources, permissions, cadence, notification behavior, and external-action
-authority before enabling recurring work.
+Do not use the public Galaga repository as the remote for a working copy that
+contains your personal data.
 
-## License and personal data
+## Personal data
 
-The framework, skills, specifications, job definitions, scripts, and
-documentation in the public Galaga project are licensed under Apache-2.0.
+Durable personal data lives only in the three personal artifacts above.
+Retrieved source material, intermediate analysis, indexes, and synchronization
+state live under `.galaga/`. These files are generated from sources the user
+places in scope, used as local context for Galaga jobs, and managed through the
+bootstrap and update workflows.
 
-Personal data, memories, journals, profiles, writing samples, goals, and other
-user-created content in a private repository remain the property of their
-respective users. Personal artifacts must never be included in an upstream
-Galaga contribution without explicit, informed user direction.
+All three personal artifacts and the entire `.galaga/` directory are ignored
+by Git. Gitignore is a guard against accidental commits, not access control:
+keep your repository private, review changes before pushing, and do not
+force-add personal files.
+
+Run [`$delete-my-data`](.agents/skills/delete-my-data/SKILL.md) to inventory and
+delete Galaga's local personal artifacts and runtime data. The skill shows the
+exact paths first, requires confirmation, and verifies that framework files
+were not removed. It does not delete data from original services such as email
+or chat.
+
+If Galaga stores personal data anywhere else, that is a bug. Please send a pull
+request that fixes the boundary without including the personal data itself.
+
+## Contributing
+
+Feedback and improvements are welcome through pull requests. I do not monitor
+GitHub Issues, so please send a focused PR instead.
+
+## License
+
+The public Galaga framework is licensed under [Apache-2.0](LICENSE).

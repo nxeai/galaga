@@ -12,7 +12,8 @@ delegates, and evaluates work.
 
 ## Initial workflow
 
-1. Read `TASKS-SPEC.md` and the current `TASKS.md`.
+1. Read `TASKS-SPEC.md` and, if it exists, the current `TASKS.md`. Absence
+   means this pillar has not been bootstrapped.
 2. Establish the user's mandate, goals, sources of work, operational systems,
    authority boundaries, and desired degree of autonomy.
 3. Review a bounded set of real candidate, committed, rejected, deferred,

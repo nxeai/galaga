@@ -24,7 +24,8 @@ under `.galaga/`.
 
 ## Workflow
 
-1. Read `COMMUNICATION-SPEC.md` and the current `COMMUNICATION.md`.
+1. Read `COMMUNICATION-SPEC.md` and, if it exists, the current
+   `COMMUNICATION.md`. Absence means this pillar has not been bootstrapped.
 2. Gather representative evidence across available mediums, relationships,
    goals, and situations. Reuse valid cached material instead of retrieving or
    processing it again.

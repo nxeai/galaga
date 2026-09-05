@@ -7,13 +7,12 @@ description: Establish or intentionally rebuild the user's Galaga communication 
 
 Read and follow:
 
-1. `pillars/communication/COMMUNICATION-BOOTSTRAP.md`
-2. `pillars/communication/COMMUNICATION-SPEC.md`
-3. `utilities/sources/SOURCES-SPEC.md`
-4. `utilities/cache/CACHE-SPEC.md`
+1. `communication/COMMUNICATION-BOOTSTRAP.md`
+2. `communication/COMMUNICATION-SPEC.md`
+3. `utilities/cache/CACHE-SPEC.md`
 
 Create or update the user-owned
-`pillars/communication/COMMUNICATION.md`. Preserve the source, privacy,
+`communication/COMMUNICATION.md`. Preserve the source, privacy,
 review, and external-action boundaries in the job definition.
 
 Do not declare bootstrap complete until the user has reviewed the material

@@ -1,5 +1,10 @@
 # Galaga's local, inspectable runtime data.
 .galaga/
 
+# User-owned personal artifacts are local by default.
+/communication/COMMUNICATION.md
+/tasks/TASKS.md
+/context/CONTEXT.md
+
 # Common local-only files.
 .DS_Store

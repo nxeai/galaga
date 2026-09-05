@@ -7,12 +7,13 @@ separate from the publishable framework.
 ## Navigate by purpose
 
 - For communication work, read the relevant files in
-  `pillars/communication/`.
+  `communication/`.
 - For task formation or execution, read the relevant files in
-  `pillars/tasks/`.
-- Load files from `context/` only when they are relevant to the current work.
+  `tasks/`.
+- For shared personal context, read only the relevant portions of
+  `context/CONTEXT.md` when it exists.
 - Use `.agents/skills/` as job entrypoints. Keep those skills thin; the
-  suffixed pillar files are the canonical job and evaluation definitions.
+  suffixed domain files are the canonical job and evaluation definitions.
 - Treat `.galaga/` as local runtime data, never as durable personal knowledge.
 
 Do not load every file by default. Use the smallest relevant set of personal
@@ -28,13 +29,23 @@ the situation take precedence over learned defaults.
 ## Preserve the ownership boundary
 
 Unsuffixed domain files are **personal artifacts**. Examples include
-`COMMUNICATION.md`, `TASKS.md`, and the files in `context/`.
+`COMMUNICATION.md`, `TASKS.md`, and `CONTEXT.md`.
 
 - They contain private, user-specific context.
+- They are ignored by Git and may be absent before bootstrap.
 - They may evolve through their bootstrap and update jobs.
 - Improve their usefulness and fidelity; do not optimize for length.
 - Never include them in an upstream Galaga contribution.
 - Never overwrite them during a framework upgrade.
+
+If a required personal artifact is absent, treat the corresponding pillar as
+not bootstrapped. A bootstrap job may create it after the required user review;
+an update job must not silently substitute for bootstrap.
+
+Do not override the personal-artifact ignore rules merely to create a backup.
+Only version personal artifacts after the user has intentionally chosen a
+private repository or other private storage boundary and explicitly asks to
+track them.
 
 Files ending in `-SPEC.md`, `-BOOTSTRAP.md`, or `-UPDATE.md`, the contents of
 `.agents/`, this file, and general project documentation are **framework

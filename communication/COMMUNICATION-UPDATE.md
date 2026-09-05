@@ -23,7 +23,8 @@ material.
 
 ## Workflow
 
-1. Read `COMMUNICATION-SPEC.md` and the current `COMMUNICATION.md`.
+1. Read `COMMUNICATION-SPEC.md` and the current `COMMUNICATION.md`. If the
+   personal artifact is absent, stop and recommend the bootstrap job instead.
 2. Review only new or newly relevant evidence since the prior run when
    possible.
 3. Identify material gaps, contradictions, stale guidance, changed goals, and

@@ -12,7 +12,8 @@ task or duplicating the source of truth held by operational systems.
 
 ## Initial workflow
 
-1. Read `TASKS-SPEC.md` and the current `TASKS.md`.
+1. Read `TASKS-SPEC.md` and the current `TASKS.md`. If the personal artifact
+   is absent, stop and recommend the bootstrap job instead.
 2. Review new or newly relevant evidence from candidate decisions, execution,
    and outcomes.
 3. Identify repeated friction, successful patterns, changing priorities,
