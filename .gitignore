@@ -1,0 +1,5 @@
+# Galaga's local, inspectable runtime data.
+.galaga/
+
+# Common local-only files.
+.DS_Store
