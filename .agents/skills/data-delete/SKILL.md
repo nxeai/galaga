@@ -12,10 +12,11 @@ Delete Galaga data transparently without damaging the reusable framework.
 The default deletion scope is limited to these paths in the current Galaga
 repository:
 
-- `context/CONTEXT.md`
-- `communication/COMMUNICATION.md`
-- `tasks/TASKS.md`
-- `.galaga/`
+- `context/CONTEXT.md` - Personal context, goals, and relevant background.
+- `communication/COMMUNICATION.md` - Personal communication preferences and
+  reviewed writing examples.
+- `tasks/TASKS.md` - Personal task and decision-making preferences.
+- `.galaga/` - Cached source material and local runtime state.
 
 Deleting these local copies does not delete source data from email, chat,
 documents, code hosts, or other external systems. It also does not prevent a
@@ -35,12 +36,14 @@ or recommended option first.
 
 ## Workflow
 
-1. Before using any tools, list every path in the default scope. Explain that
-   external source data will remain and that future authorized jobs may
-   retrieve it again. Ask the user to choose and confirm one of the numbered
-   deletion modes above, reproducing the numbered options in the prompt with
-   the recommended option first. Explicitly state that they may reply with
-   only the option number. Stop and wait for their answer.
+1. Before using any tools, begin the confirmation prompt with "All personal
+   data will be deleted, including:" and list every path in the default scope
+   using the format ``<file/dir> - <brief description>``. Then state: "Only
+   files in this directory (Galaga repo) will be deleted. Nothing outside of
+   it will be touched." Ask the user to choose and confirm one of the numbered
+   deletion modes above, reproducing the numbered options with the recommended
+   option first. Do not add instructions explaining how to reply. Stop and
+   wait for their answer.
 2. After confirmation, resolve the current repository root and verify it is a
    Galaga repository.
 3. Inventory which scoped paths exist without reading or displaying their
