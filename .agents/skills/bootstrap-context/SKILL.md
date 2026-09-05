@@ -1,6 +1,6 @@
 ---
 name: bootstrap-context
-description: Establish or intentionally rebuild the user's shared Galaga context from reviewed goals and evidence.
+description: Guide the user step by step to establish or intentionally rebuild their shared Galaga context from reviewed goals and evidence.
 ---
 
 # Bootstrap context
@@ -13,3 +13,9 @@ Read and follow:
 
 Create or update the user-owned `context/CONTEXT.md`. Do not declare bootstrap
 complete until the user has reviewed consequential retained context.
+
+Begin the guided interview immediately. Invocation authorizes the interview,
+not external retrieval or writing the personal artifact. Do not replace the
+interview with an omnibus scope-and-permissions question. Ask one focused
+question at a time and request permission to write only after the user has
+reviewed a concrete draft.
