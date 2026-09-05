@@ -23,20 +23,24 @@ future authorized job from retrieving that data again.
 
 ## Deletion modes
 
-- **Move to Trash (recommended):** Recoverable until the user empties the
-  system Trash. The data has not been permanently deleted while it remains
-  there.
-- **Permanently delete:** Irreversible. Use only when the user explicitly
-  chooses this mode.
+Whenever asking the user to choose a deletion mode, present the options as a
+numbered list so they can answer with only the option number. Put the default
+or recommended option first.
+
+1. **Move to Trash (recommended):** Recoverable until the user empties the
+   system Trash. The data has not been permanently deleted while it remains
+   there.
+2. **Permanently delete:** Irreversible. Use only when the user explicitly
+   chooses this mode.
 
 ## Workflow
 
 1. Before using any tools, list every path in the default scope. Explain that
    external source data will remain and that future authorized jobs may
-   retrieve it again. Ask the user to choose and confirm one of these options:
-   move all listed data to the system Trash, which is recommended and
-   recoverable until the Trash is emptied; or permanently delete all listed
-   data, which is irreversible. Stop and wait for their answer.
+   retrieve it again. Ask the user to choose and confirm one of the numbered
+   deletion modes above, reproducing the numbered options in the prompt with
+   the recommended option first. Explicitly state that they may reply with
+   only the option number. Stop and wait for their answer.
 2. After confirmation, resolve the current repository root and verify it is a
    Galaga repository.
 3. Inventory which scoped paths exist without reading or displaying their
