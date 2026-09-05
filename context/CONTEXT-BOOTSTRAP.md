@@ -57,6 +57,71 @@ Adapt the wording naturally, but start collecting useful context in the first
 turn. Do not ask a single yes-or-no question that combines scope, sources,
 sensitivity, and permission to write.
 
+## Tool discovery and access
+
+The Tools and systems interview must discover what the user actually works
+with and, when useful, help Codex gain approved access. Consider these
+categories one at a time rather than presenting them as a single form:
+
+- email;
+- chat and team communication;
+- documents and file storage;
+- calendar and scheduling;
+- project and task management;
+- development, source control, and technical operations; and
+- professional networks, social platforms, or other role-specific systems.
+
+The examples are prompts for discovery, not a required tool list. Follow the
+user's role and answers, skip irrelevant categories, and add important ones
+that are missing.
+
+For each tool the user names:
+
+1. Learn its purpose, relevant account or workspace, what it is authoritative
+   for, and any boundary the user already knows.
+2. Check the capabilities actually available in the current Codex environment
+   before claiming the tool is accessible or unavailable.
+3. Recommend the narrowest practical access path:
+   - an existing or installable plugin or connector for supported structured
+     access;
+   - an approved CLI, API, or MCP server when that is the appropriate durable
+     integration;
+   - browser or Computer Use control when no suitable structured integration
+     exists or the relevant information is only available through a user
+     interface; or
+   - user-provided answers or exports when the user does not want to connect
+     the system.
+4. Explain in plain language what the proposed access would let Galaga read or
+   do, what setup or permission is required, and what initial information it
+   proposes to retrieve. Avoid speculative or complicated installation
+   instructions.
+5. Ask for approval for that specific setup or retrieval. Installation,
+   connection, authentication, browser control, and data retrieval are
+   separate actions; approval for one does not silently authorize the others.
+6. After access is available and retrieval is approved, fetch the smallest
+   useful orientation slice. Do not begin with bulk history or exhaustive
+   synchronization.
+
+Useful initial orientation may include:
+
+- email or chat identity, organization or workspace, relevant channels, and
+  recurring collaborators;
+- document, project-management, or calendar workspace structure and which
+  locations are sources of truth;
+- development organizations, selected repositories, primary technologies,
+  and relevant workflow conventions; and
+- the user's current public role or profile information from an explicitly
+  approved professional platform.
+
+These are examples, not automatic retrieval authority. Before each initial
+read, state the bounded source and purpose. Keep raw results and provenance in
+`.galaga/` under `CACHE-SPEC.md`; propose only durable, decision-useful facts
+for `CONTEXT.md`, and include them only after user review.
+
+If setup cannot be completed in the current turn, record the tool and its
+access status as an open question and continue the interview. One unavailable
+integration must not block the rest of context bootstrap.
+
 ## Workflow
 
 1. Read `CONTEXT-SPEC.md` and, if present, the current `CONTEXT.md`. Absence
@@ -67,8 +132,9 @@ sensitivity, and permission to write.
    ask the first useful question. Do not ask for general permission to proceed.
 3. Interview the user one focused question at a time. Move through Job, Goals,
    People, Tools and systems, and Boundaries and standing context in a natural
-   order. Gather enough to make each section useful, not every conceivable
-   detail.
+   order. During Tools and systems, follow the discovery, access, and bounded
+   retrieval process above. Gather enough to make each section useful, not
+   every conceivable detail.
 4. Synthesize Snapshot after the substantive sections are understood. Track
    unresolved consequential gaps under Open questions rather than extending
    the interview indefinitely.
@@ -77,8 +143,9 @@ sensitivity, and permission to write.
    uncertainty. Remove unnecessary sensitive detail and avoid duplicating
    authoritative operational systems.
 6. If external evidence would materially improve a section, explain the
-   specific source and benefit and ask permission at that point. Continue from
-   user answers alone if the user declines.
+   specific source, access method, bounded initial retrieval, and benefit, then
+   ask permission at that point. Continue from user answers alone if the user
+   declines.
 7. Assemble a complete draft using every required section from
    `CONTEXT-SPEC.md`. Present the draft in the conversation and ask the user
    what they want corrected, qualified, removed, or added.

@@ -63,15 +63,30 @@ does not earn its cost.
 
 ### 5. Tools and systems
 
-Cover the user's working environment, including:
+Begin with a compact tool registry using these columns:
 
-- tools and services used for communication, planning, execution, and records;
+| Field | What it captures |
+| --- | --- |
+| Category | Email, chat, docs, calendar, project management, development, professional network, or another meaningful function. |
+| Tool | Product or system name. |
+| Purpose and authority | What the user uses it for and what information it is the source of truth for. |
+| Account or workspace | Only the organization, workspace, profile, or environment distinction needed to select the right place. |
+| Access | Current approved access path and status, such as plugin, connector, CLI, API, MCP, browser control, manual, or not connected. Date volatile access claims. |
+| Boundaries | Relevant scope, exclusions, permission limits, or workflow caveats. |
+
+Consider the user's full working environment, including:
+
+- tools and services used for email, chat, documents, calendar, planning,
+  development, professional presence, execution, and records;
 - the source of truth for important kinds of information;
 - relevant repository, workspace, account, or environment boundaries; and
-- known access limits, retrieval expectations, and workflow caveats.
+- approved access methods, current access status, retrieval expectations, and
+  workflow caveats.
 
 Name systems and explain their purpose. Do not copy their contents or store
-credentials, secrets, or tokens.
+credentials, secrets, or tokens. Record durable access context, not permission
+to perform a future retrieval or action; current authorization must still be
+obtained when required.
 
 ### 6. Boundaries and standing context
 
