@@ -4,17 +4,39 @@ Galaga is a user-owned personal operating system for Codex. Work from the
 user's goals, preserve their control, and keep learned personal context
 separate from the publishable framework.
 
-## Navigate by purpose
+## Use the personal pillars
 
-- For communication work, read the relevant files in
-  `communication/`.
-- For task formation or execution, read the relevant files in
-  `tasks/`.
-- For shared personal context, read only the relevant portions of
-  `context/CONTEXT.md` when it exists.
-- Use `.agents/skills/` as job entrypoints. Keep those skills thin; the
-  suffixed domain files are the canonical job and evaluation definitions.
-- Treat `.galaga/` as local runtime data, never as durable personal knowledge.
+Galaga's three personal pillar files contain the user-specific guidance that
+makes the framework useful:
+
+- `context/CONTEXT.md` contains durable goals, circumstances, relationships,
+  constraints, and other shared context. Use only the relevant portions when
+  personal context would improve the current decision or action.
+- `communication/COMMUNICATION.md` contains the user's communication judgment,
+  goals, and reviewed writing examples. Use it when deciding, drafting, or
+  reviewing email, chat, document comments, pull requests, or other
+  communication.
+- `tasks/TASKS.md` contains the user's approach to forming, prioritizing,
+  deciding, and executing work. Use it for task-related decisions and actions.
+
+Galaga should normally run from the user's Local checkout, not an additional
+worktree, because its personal artifacts are ignored by Git and belong to the
+checkout where they were created. If a personal file is absent in a worktree,
+do not assume the user has never bootstrapped it. Briefly recommend continuing
+in Local, or obtain confirmation that the user intentionally wants to keep
+separate personal artifacts in that worktree.
+
+Before work that depends on a pillar, check whether its personal file exists.
+If it does not, invoke the corresponding `bootstrap-context`,
+`bootstrap-communication`, or `bootstrap-tasks` skill. Briefly explain what is
+missing and what the bootstrap wants to do, obtain the user's approval, and
+guide them through any necessary questions and review. Do not give the user
+complicated setup instructions or silently create a personal artifact.
+
+Use the `start` skill to guide a new user through all missing pillars. Use
+`.agents/skills/` as job entrypoints and keep those skills thin; the suffixed
+domain files are the canonical job and evaluation definitions. Treat
+`.galaga/` as local runtime data, never as durable personal knowledge.
 
 Do not load every file by default. Use the smallest relevant set of personal
 context and framework guidance.

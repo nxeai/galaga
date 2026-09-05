@@ -31,9 +31,12 @@ Happy to receive PRs improve/expand Galaga.
 2. Clone your private repository to your computer.
 3. Create a Codex project pointing to the folder where you cloned the
    repository.
-4. Run the bootstrap skills for the domains you want and review what they
-   learn.
-5. Choose any future job cadence and action permissions yourself.
+4. Start Galaga threads in **Local**, not a worktree, so they can use the same
+   Git-ignored personal files.
+5. In Codex, run [`$start`](.agents/skills/start/SKILL.md). Galaga will explain
+   what it wants to learn, ask for approval, populate the personal files with
+   your review, and help with a first real piece of work.
+6. Choose any future job cadence and action permissions yourself.
 
 ## What it does
 
