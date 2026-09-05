@@ -1,10 +1,16 @@
 # Galaga
 
 Galaga is a personal operating system for Codex. I am building it to automate
-my job (startup CTO) while still staying in control.
+my job (startup CTO) while still staying in control. It is named after the
+arcade game: work arrives in recurring waves, the system learns how to handle
+them, and the human stays in control. For now, I am building Galaga specifically
+for my own setup:
 
-Galaga is named after the arcade game: work arrives in recurring waves, the
-system learns how to handle them, and the human stays in control.
+- Codex with $200/mo plan
+- Mac
+- CTO concerns
+
+Happy to receive PRs improve/expand Galaga.
 
 > [!CAUTION]
 > **Do not use Galaga if you do not trust AI systems, OpenAI, Codex, or any
@@ -75,10 +81,12 @@ force-add personal files.
 
 Run [`$data-summarize`](.agents/skills/data-summarize/SKILL.md) for a lightweight
 summary of what Galaga currently has. Run
-[`$data-delete`](.agents/skills/data-delete/SKILL.md) to inventory and delete
-Galaga's local personal artifacts and runtime data. Deletion shows the exact
-paths first, requires confirmation, and does not remove data from original
-services such as email or chat.
+[`$data-delete`](.agents/skills/data-delete/SKILL.md) to remove Galaga's local
+personal artifacts and runtime data. Before using tools, the skill lists the
+full scope and asks whether to move it to the system Trash (recommended and
+recoverable) or permanently delete it. Trashed data still exists until the
+Trash is emptied. Neither option removes data from original services such as
+email or chat.
 
 If Galaga stores personal data anywhere else, that is a bug. Please send a pull
 request that fixes the boundary without including the personal data itself.
