@@ -41,6 +41,68 @@ domain files are the canonical job and evaluation definitions. Treat
 Do not load every file by default. Use the smallest relevant set of personal
 context and framework guidance.
 
+## Follow the module convention
+
+Every Galaga module uses the same four-file contract. A module is a durable
+personal capability, such as context, communication, or tasks. Utility skills,
+runtime infrastructure, and general documentation are not modules and do not
+need this structure.
+
+Put each module in a lowercase directory and use one canonical uppercase name
+for all four files:
+
+```text
+<module>/
+  <MODULE>.md
+  <MODULE>-SPEC.md
+  <MODULE>-BOOTSTRAP.md
+  <MODULE>-UPDATE.md
+```
+
+For example:
+
+```text
+context/
+  CONTEXT.md
+  CONTEXT-SPEC.md
+  CONTEXT-BOOTSTRAP.md
+  CONTEXT-UPDATE.md
+```
+
+The four files have distinct responsibilities:
+
+- `<MODULE>.md` is the user-owned personal artifact and the authority on that
+  user for the module. It is local and Git-ignored. When Galaga creates or
+  changes it, use the reviewed bootstrap or update workflow; the user may edit
+  their own artifact directly at any time.
+- `<MODULE>-SPEC.md` defines what the personal artifact must accomplish. It
+  owns scope, required content or structure, quality criteria, boundaries, and
+  evaluation. It defines fitness, not the steps of a job.
+- `<MODULE>-BOOTSTRAP.md` defines how to create the first useful personal
+  artifact or intentionally rebuild it. It owns inputs, permissions, evidence
+  gathering, user questions and review, creation, and completion criteria.
+- `<MODULE>-UPDATE.md` defines how to maintain an existing personal artifact
+  from new evidence and feedback. It owns change detection, user review,
+  incremental edits, no-change outcomes, and routing to bootstrap when the
+  personal artifact is absent.
+
+Skills in `.agents/skills/` are thin entrypoints into these canonical jobs.
+Name module job skills `bootstrap-<module>` and `update-<module>` and have them
+defer to the matching suffixed file rather than duplicate its instructions.
+
+Enforce this convention whenever adding or changing a module:
+
+- Do not add a module without all three committed suffix files and an explicit
+  Gitignore rule for its unsuffixed personal artifact.
+- Do not commit the unsuffixed personal artifact, personal examples, retrieved
+  source material, or generated user data.
+- Do not blur specification, initial creation, and ongoing maintenance into a
+  single file or introduce a template as a substitute for the specification.
+- Keep names, references, bootstrap and update skills, and cross-module
+  onboarding or data-management guidance consistent with the module.
+- Treat a change that violates this contract as incomplete and repair it
+  before considering the framework change finished.
+
 ## Respect the decide and act boundary
 
 Galaga helps the user decide what should happen and act on committed choices.
