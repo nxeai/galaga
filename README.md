@@ -19,6 +19,16 @@ system learns how to handle them, and the human stays in control.
 > choices, outcomes, data loss, disclosure, or other damages arising from its
 > use.
 
+## Quick start
+
+1. Create your own **private repository** using Galaga as a GitHub template.
+2. Clone your private repository to your computer.
+3. Create a Codex project pointing to the folder where you cloned the
+   repository.
+4. Run the bootstrap skills for the domains you want and review what they
+   learn.
+5. Choose any future job cadence and action permissions yourself.
+
 ## What it does
 
 Galaga maintains three personal artifacts:
@@ -41,13 +51,14 @@ can always intervene.
 
 ## Use it safely
 
-Create your own **private repository** using Galaga as a GitHub template, then
-clone that private repository and open it in Codex. Run the bootstrap skills
-for the domains you want, review what they learn, and choose any future job
-cadence and action permissions yourself.
-
-Do not use the public Galaga repository as the remote for a working copy that
-contains your personal data.
+- Keep your working repository private. Do not use the public Galaga
+  repository as the remote for a copy containing personal data.
+- Start with the minimum sources and permissions needed. Expand access,
+  schedules, and action authority deliberately.
+- Review what Galaga learns and verify consequential recommendations and
+  actions before approving them.
+- Inspect your personal data regularly and remove it when you no longer want
+  Galaga to retain it.
 
 ## Personal data
 
@@ -62,11 +73,12 @@ by Git. Gitignore is a guard against accidental commits, not access control:
 keep your repository private, review changes before pushing, and do not
 force-add personal files.
 
-Run [`$delete-my-data`](.agents/skills/delete-my-data/SKILL.md) to inventory and
-delete Galaga's local personal artifacts and runtime data. The skill shows the
-exact paths first, requires confirmation, and verifies that framework files
-were not removed. It does not delete data from original services such as email
-or chat.
+Run [`$data-summarize`](.agents/skills/data-summarize/SKILL.md) for a lightweight
+summary of what Galaga currently has. Run
+[`$data-delete`](.agents/skills/data-delete/SKILL.md) to inventory and delete
+Galaga's local personal artifacts and runtime data. Deletion shows the exact
+paths first, requires confirmation, and does not remove data from original
+services such as email or chat.
 
 If Galaga stores personal data anywhere else, that is a bug. Please send a pull
 request that fixes the boundary without including the personal data itself.

@@ -1,9 +1,9 @@
 ---
-name: delete-my-data
+name: data-delete
 description: Inventory and delete Galaga's local personal artifacts and runtime data when the user asks to erase or reset their Galaga data. Does not delete data from external source systems.
 ---
 
-# Delete my data
+# Delete data
 
 Delete Galaga data transparently without damaging the reusable framework.
 
