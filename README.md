@@ -71,6 +71,12 @@ can always intervene.
 
 ## Personal data
 
+**All personal data stored by Galaga stays on your local computer inside the
+Galaga working directory.** Galaga does not create its own database or store
+copies elsewhere. This does not include information sent to OpenAI when you use
+Codex: content Codex processes is subject to your OpenAI account, plan, terms,
+and data controls.
+
 Durable personal data lives only in the three personal artifacts above.
 Retrieved source material, intermediate analysis, indexes, and synchronization
 state live under `.galaga/`. These files are generated from sources the user

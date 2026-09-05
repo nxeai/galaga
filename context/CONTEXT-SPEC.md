@@ -7,21 +7,92 @@ and personal background needed to make better communication and task
 decisions. It should prevent repeated reconstruction without becoming an
 exhaustive dossier or a duplicate of operational systems.
 
-This specification defines fitness for purpose, not a required outline. Keep
-context in one artifact until real usage shows that splitting it would improve
-navigation or reduce context cost.
+Keep context in one artifact until real usage shows that splitting it would
+improve navigation or reduce context cost. Use the required structure below so
+a fresh agent can find the same kinds of context quickly.
 
-## Scope
+## Required structure
 
-Useful context may include:
+`CONTEXT.md` must contain these top-level sections in this order. A section may
+say that information is unknown or not yet provided, but it should not be
+silently omitted. Add subsections when they materially improve navigation.
 
-- current goals, durable direction, temporary priorities, and meaningful
-  tensions among them;
-- roles, responsibilities, and constraints;
-- people and relationships when they materially affect decisions;
-- how the user intends to decide, prioritize, delegate, and manage risk;
-- relevant work environments and authoritative systems; and
-- boundaries around access, autonomy, privacy, and external action.
+### 1. Snapshot
+
+A compact orientation: who the user is, their current situation, the scope of
+this context, and when it was last meaningfully reviewed. This should help an
+agent decide which later sections are relevant, not summarize the whole file.
+
+### 2. Job
+
+Cover the user's current role and work environment, including:
+
+- title or function, organization, and relevant company or team stage;
+- responsibilities, recurring concerns, and what success looks like;
+- scope of ownership, decision authority, and important constraints; and
+- current work context that changes how the role should be understood.
+
+### 3. Goals
+
+Cover the outcomes the user is actively trying to produce, including:
+
+- current goals and their relative priority;
+- time horizon, motivation, and observable signs of progress or completion;
+- durable direction versus temporary priorities; and
+- tensions, tradeoffs, dependencies, and explicit non-goals.
+
+Do not turn every active task into a goal. Prefer outcomes that should shape
+decisions across multiple pieces of work.
+
+### 4. People
+
+Cover relationships that materially affect the user's decisions or actions,
+including as applicable:
+
+- manager or other authority figures;
+- direct reports and the responsibilities they own;
+- peers, collaborators, and internal stakeholders;
+- customers, partners, investors, advisors, or other external stakeholders;
+  and
+- team and organizational structure needed to understand those relationships.
+
+For each person or group, retain only the role, relationship, ownership,
+relevant goals, and interaction context that helps Galaga reason well. Avoid
+contact details, personal trivia, speculation, and sensitive information that
+does not earn its cost.
+
+### 5. Tools and systems
+
+Cover the user's working environment, including:
+
+- tools and services used for communication, planning, execution, and records;
+- the source of truth for important kinds of information;
+- relevant repository, workspace, account, or environment boundaries; and
+- known access limits, retrieval expectations, and workflow caveats.
+
+Name systems and explain their purpose. Do not copy their contents or store
+credentials, secrets, or tokens.
+
+### 6. Boundaries and standing context
+
+Cover durable context that applies across the other sections, including:
+
+- privacy and sensitivity boundaries;
+- limits on autonomy, approval, and external action;
+- stable constraints and risks; and
+- other enduring facts that materially affect communication or task decisions.
+
+Keep detailed writing preferences in `communication/COMMUNICATION.md` and task
+operating preferences in `tasks/TASKS.md`. Include only the cross-cutting
+context needed to understand or apply them.
+
+### 7. Open questions
+
+List consequential gaps, conflicts, or potentially stale claims that still
+need user review. Remove an item when it is resolved and update the relevant
+section.
+
+## Scope and exclusions
 
 Keep large source material, credentials, raw activity history, and disposable
 intermediate analysis out of the artifact. Point to authoritative systems
@@ -42,6 +113,8 @@ Immediate user instructions and current facts take precedence.
 
 Successful context is:
 
+- **Complete:** every required section is present and covers the applicable
+  minimums above or explicitly identifies what is not yet known.
 - **Relevant:** each entry can materially improve a likely decision or action.
 - **Current:** time-sensitive claims are dated, qualified, or removed.
 - **Navigable:** an agent can find what it needs without loading everything.
@@ -52,8 +125,10 @@ Successful context is:
 
 ## Evaluation
 
-Evaluate whether representative communication and task scenarios improve when
-the relevant context is available. Flag content that is unused, duplicated,
-too sensitive, stale, unsupported, or better retrieved on demand. The artifact
-is useful only when its context cost is justified by better decisions or less
-reconstruction.
+First verify that every required section is present, navigable, and adequately
+populated or explicitly marked unknown. Then evaluate whether representative
+communication and task scenarios improve when the relevant context is
+available. Flag content that is unused, duplicated, too sensitive, stale,
+unsupported, misplaced in another personal artifact, or better retrieved on
+demand. The artifact is useful only when its context cost is justified by
+better decisions or less reconstruction.
