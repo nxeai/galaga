@@ -123,12 +123,17 @@ Successful context is:
 - **User-owned:** consequential interpretations and goals receive user review.
 - **Safe:** it minimizes sensitive detail and never expands action authority.
 
-## Evaluation
+## Evaluation and repair
 
-First verify that every required section is present, navigable, and adequately
-populated or explicitly marked unknown. Then evaluate whether representative
-communication and task scenarios improve when the relevant context is
-available. Flag content that is unused, duplicated, too sensitive, stale,
-unsupported, misplaced in another personal artifact, or better retrieved on
-demand. The artifact is useful only when its context cost is justified by
-better decisions or less reconstruction.
+When the user's intent is to fix, clean up, improve, optimize, or otherwise
+bring `CONTEXT.md` closer to this specification, first verify that every
+required section is present, navigable, and adequately populated or explicitly
+marked unknown. Put retained information in the correct section while
+preserving supported meaning, provenance, and uncertainty. Remove duplication,
+stale or unsupported claims, unnecessary sensitive detail, and content that
+belongs in another personal artifact or should be retrieved on demand. Do not
+invent context to fill gaps; mark material gaps or ask the user.
+
+Then evaluate whether representative communication and task scenarios improve
+when the relevant context is available. The artifact is useful only when its
+context cost is justified by better decisions or less reconstruction.

@@ -75,9 +75,10 @@ The four files have distinct responsibilities:
   user for the module. It is local and Git-ignored. When Galaga creates or
   changes it, use the reviewed bootstrap or update workflow; the user may edit
   their own artifact directly at any time.
-- `<MODULE>-SPEC.md` defines what the personal artifact must accomplish. It
-  owns scope, required content or structure, quality criteria, boundaries, and
-  evaluation. It defines fitness, not the steps of a job.
+- `<MODULE>-SPEC.md` is the authority on the personal artifact's structure and
+  fitness. It must define the required sections, what belongs in each section,
+  what does not belong, quality criteria, and how to evaluate and repair the
+  artifact. It defines the result, not the steps of a scheduled job.
 - `<MODULE>-BOOTSTRAP.md` defines how to create the first useful personal
   artifact or intentionally rebuild it. It owns inputs, permissions, evidence
   gathering, user questions and review, creation, and completion criteria.
@@ -90,6 +91,16 @@ Skills in `.agents/skills/` are thin entrypoints into these canonical jobs.
 Name module job skills `bootstrap-<module>` and `update-<module>` and have them
 defer to the matching suffixed file rather than duplicate its instructions.
 
+Whenever the user's intent is to bring `<MODULE>.md` closer to its intended
+form, read `<MODULE>-SPEC.md` and use it as the authoritative contract. Requests
+such as "fix," "cleanup," "improve," and "optimize" are examples, not an
+exhaustive command vocabulary; follow the spirit of the request. Diagnose the
+artifact against the required structure, put retained information in the
+correct section, remove unsupported or misplaced material when authorized,
+and verify the result against the spec. Preserve supported personal meaning
+and uncertainty; structural authority is not permission to invent, silently
+reinterpret, or discard user context.
+
 Enforce this convention whenever adding or changing a module:
 
 - Do not add a module without all three committed suffix files and an explicit
@@ -98,6 +109,8 @@ Enforce this convention whenever adding or changing a module:
   source material, or generated user data.
 - Do not blur specification, initial creation, and ongoing maintenance into a
   single file or introduce a template as a substitute for the specification.
+- Do not accept a spec that leaves the personal artifact's structure to the
+  implementing agent or lacks enough evaluation guidance to repair it.
 - Keep names, references, bootstrap and update skills, and cross-module
   onboarding or data-management guidance consistent with the module.
 - Treat a change that violates this contract as incomplete and repair it

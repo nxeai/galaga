@@ -10,9 +10,60 @@ substantive editing.
 It represents both the user's authentic voice and the way the user intends to
 communicate. Past behavior is evidence; it is not automatically the target.
 
-This specification defines fitness for purpose, not a required document
-outline. `COMMUNICATION.md` may reorganize as the user and the available
-evidence evolve.
+## Required structure
+
+`COMMUNICATION.md` must contain these top-level sections in this order. A
+section may identify missing evidence or unresolved questions, but it should
+not be silently omitted. Add subsections when they materially improve
+navigation.
+
+### 1. Communication goals
+
+State how the user wants communication to function and who they are trying to
+become as a communicator. Distinguish authentic current voice from deliberate
+aspirations, and note meaningful tensions among goals.
+
+### 2. Decision model
+
+Define how the user decides whether, when, where, and to whom to communicate;
+what outcome to pursue; what to include or omit; and when to ask, wait, gather
+evidence, change medium, or not communicate. Include the user's approach to
+generating options, analyzing tradeoffs, and refining consequential choices.
+
+### 3. Voice and style
+
+Describe the user's durable writing characteristics with concrete, usable
+guidance for tone, directness, structure, length, wording, formatting,
+polish, empathy, and uncertainty. Separate endorsed preferences, aspirations,
+patterns to avoid, and context-dependent exceptions.
+
+### 4. Medium guidance
+
+Define how judgment and execution change across the media the user actually
+uses, such as email, Slack or chat, document comments, pull-request reviews,
+durable documents, and live conversations. Cover only meaningful differences;
+do not repeat generic style guidance for every medium.
+
+### 5. Relationship and situation guidance
+
+Define how communication changes with relevant relationships and situations,
+such as a subordinate, manager, peer, internal customer, external customer,
+candidate, or investor; and with urgency, stakes, sensitivity, visibility,
+ambiguity, or conflict. Prefer principles and distinctions over an exhaustive
+matrix.
+
+### 6. Reviewed writing samples
+
+Include a compact set of user-reviewed examples. Each sample must identify its
+goal, medium, relationship or audience, relevant situation, and the behavior
+it demonstrates. Clearly label authentic, aspirational, before-and-after, and
+negative examples so an agent knows how to use them.
+
+### 7. Exceptions and open questions
+
+Record important contradictions, situational exceptions, weakly supported
+patterns, and questions that still need user review. Remove resolved items and
+update the relevant section.
 
 ## Operating model
 
@@ -128,7 +179,15 @@ A successful artifact is:
 - **Safe:** it preserves factual accuracy, user control, privacy, and
   external-action boundaries.
 
-## Evaluation
+## Evaluation and repair
+
+When the user's intent is to fix, clean up, improve, optimize, or otherwise
+bring `COMMUNICATION.md` closer to this specification, first check that every
+required section is present and that retained guidance is in the correct
+section. Preserve user-reviewed meaning and examples while removing
+duplication, unsupported rules, stale guidance, and misplaced raw evidence.
+Do not fill gaps by inventing preferences or samples; mark material gaps or
+ask the user.
 
 Evaluate both the artifact and its observed effect.
 
