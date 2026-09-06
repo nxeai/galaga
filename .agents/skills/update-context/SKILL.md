@@ -1,6 +1,6 @@
 ---
 name: update-context
-description: Maintain the user's shared Galaga context through small, reviewed, evidence-backed changes.
+description: Create or progressively improve the user's shared Galaga context from relevant evidence and feedback.
 ---
 
 # Update context
@@ -11,6 +11,8 @@ Read and follow:
 2. `context/CONTEXT-SPEC.md`
 3. `utilities/cache/CACHE-SPEC.md`
 
-Update only the user-owned `context/CONTEXT.md`. Preserve uncertainty, request
+Create or update the user-owned `context/CONTEXT.md`. Follow the shared update
+inputs in `AGENTS.md`; missing or partial files need no special mode.
+Preserve uncertainty, request
 review for consequential changes, and accept a justified no-op as a successful
 result.

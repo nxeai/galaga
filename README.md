@@ -34,8 +34,8 @@ Happy to receive PRs improve/expand Galaga.
 4. Start Galaga threads in **Local**, not a worktree, so they can use the same
    Git-ignored personal files.
 5. In Codex, run [`$start`](.agents/skills/start/SKILL.md). Galaga will explain
-   what it wants to learn, ask for approval, populate the personal files with
-   your review, and help with a first real piece of work.
+   what you want help with and coordinate small module updates around that
+   first real piece of work. Personal knowledge grows with use.
 6. Choose any future job cadence and action permissions yourself.
 
 ## What it does
@@ -49,10 +49,14 @@ Galaga maintains three personal artifacts:
 
 At a high level, Galaga has two motions:
 
-- **Init:** gather information with the user and establish the personal
-  artifacts.
-- **Loops:** periodically use new evidence and feedback to improve the
-  artifacts and help decide or act within the user's approvals.
+- **Start:** coordinate relevant updates to deliver a first useful result.
+- **Update:** create missing personal artifacts or improve existing ones from
+  evidence and feedback, interactively or on an approved schedule.
+
+Each module has a local personal file, a committed `-SPEC.md` defining its
+structure and quality, and a committed `-UPDATE.md` defining its learning
+protocol. Partial coverage is expected; complete onboarding is not required
+before Galaga can help.
 
 The specific jobs, loops, and cadences are still being designed. This
 repository enables no schedules or external actions by itself, and the user
@@ -81,7 +85,7 @@ Durable personal data lives only in the three personal artifacts above.
 Retrieved source material, intermediate analysis, indexes, and synchronization
 state live under `.galaga/`. These files are generated from sources the user
 places in scope, used as local context for Galaga jobs, and managed through the
-bootstrap and update workflows.
+update workflows.
 
 All three personal artifacts and the entire `.galaga/` directory are ignored
 by Git. Gitignore is a guard against accidental commits, not access control:

@@ -1,6 +1,6 @@
 ---
 name: update-communication
-description: Review new communication evidence and maintain the user's Galaga communication model through user-approved, evidence-backed changes.
+description: Create or progressively improve writing guidance and reviewed samples by channel, audience, and intent.
 ---
 
 # Update communication
@@ -11,6 +11,8 @@ Read and follow:
 2. `communication/COMMUNICATION-SPEC.md`
 3. `utilities/cache/CACHE-SPEC.md`
 
-Update only the user-owned `communication/COMMUNICATION.md`. Keep
+Create or update the user-owned `communication/COMMUNICATION.md`. Follow the
+shared update inputs in `AGENTS.md`; missing or partial files need no special
+mode. Keep
 intermediate evidence under `.galaga/`. Batch meaningful proposals for user
 review, and accept a justified no-op as a successful result.

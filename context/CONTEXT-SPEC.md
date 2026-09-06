@@ -103,6 +103,10 @@ context needed to understand or apply them.
 
 ### 7. Open questions
 
+Track unexplored tools, channels, teams, projects, initiatives, and goals here,
+along with consequential gaps and freshness concerns. Partial coverage is a
+valid initial state, not a reason to delay the user's task.
+
 List consequential gaps, conflicts, or potentially stale claims that still
 need user review. Remove an item when it is resolved and update the relevant
 section.

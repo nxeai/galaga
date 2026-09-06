@@ -20,7 +20,7 @@ Summarize the current state of:
 ## Workflow
 
 1. Check which personal artifacts exist. Treat an absent artifact as not yet
-   bootstrapped.
+   initialized in this checkout.
 2. Read the existing personal artifacts and summarize their major areas of
    coverage, maturity, uncertainty, and obvious gaps.
 3. Inspect `.galaga/` at the metadata level: report available source or cache
@@ -31,6 +31,6 @@ Summarize the current state of:
    runtime data. State what is absent or stale when relevant.
 
 Keep the default response short and high-level. Do not quote personal
-artifacts, enumerate sensitive details, retrieve external data, run bootstrap
-or update jobs, or modify any file. Offer deeper inspection only when it would
+artifacts, enumerate sensitive details, retrieve external data, run update
+jobs, or modify any file. Offer deeper inspection only when it would
 help the user and let them choose the area.

@@ -1,28 +1,36 @@
 # Update tasks
 
-## Status
-
-This workflow is provisional and should evolve from observed task decisions
-and outcomes.
-
 ## Purpose
 
-Improve `TASKS.md` from new evidence without converting every activity into a
-task or duplicating the source of truth held by operational systems.
+Create, enrich, correct, and refresh `TASKS.md` through one incremental
+protocol. Follow the shared update rules in `AGENTS.md`. Learn from real
+decisions and outcomes without manufacturing work or copying backlogs.
 
-## Initial workflow
+## Workflow
 
-1. Read `TASKS-SPEC.md` and the current `TASKS.md`. If the personal artifact
-   is absent, stop and recommend the bootstrap job instead.
-2. Review new or newly relevant evidence from candidate decisions, execution,
-   and outcomes.
-3. Identify repeated friction, successful patterns, changing priorities,
-   contradictions, and stale assumptions.
-4. Propose the smallest useful changes and explain their expected effect.
-5. Ask the user to review material changes, especially those affecting
-   prioritization, delegation, autonomy, or authority.
-6. Apply approved changes and re-evaluate the artifact against
-   `TASKS-SPEC.md`.
+1. Read `TASKS-SPEC.md` and relevant existing guidance, if present. Initialize
+   missing files from useful evidence and preserve partial knowledge.
+2. Start with the immediate task, goals, and established authority. Review a
+   bounded amount of evidence from candidate, committed, rejected, deferred,
+   delegated, completed, or reopened work.
+3. Identify useful decision principles, ownership expectations, constraints,
+   execution practices, and outcome criteria. Distinguish observed behavior
+   from endorsed preferences and durable changes.
+4. Help with the current decision or action without waiting for full coverage.
+   Ask focused questions only when material uncertainty affects that work.
+5. Review material interpretations and examples with the user, especially
+   prioritization, delegation, autonomy, and authority. Scheduled runs queue
+   unresolved proposals for later review.
+6. Create or revise `TASKS.md` using the required structure, retaining endorsed
+   guidance and marking gaps. Evaluate against the spec and available outcomes.
 
-A valid run may make no change. Keep personal evidence under `.galaga/` and
-personal conclusions in `TASKS.md`; do not place them in this framework file.
+## Recurring runs and completion
+
+Reuse cached evidence and review new or newly relevant decisions within scope
+and budget. Prioritize corrections, stale assumptions, recurring friction,
+then coverage gaps. A useful initial artifact, improvement, queued review, or
+no-op is a valid outcome.
+
+Keep evidence and retrieval state in `.galaga/`. Operational systems remain
+authoritative for tasks. This protocol does not itself authorize creating
+external tasks, assigning work to others, or activating schedules.

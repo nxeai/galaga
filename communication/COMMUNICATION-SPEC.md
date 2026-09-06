@@ -61,6 +61,11 @@ negative examples so an agent knows how to use them.
 
 ### 7. Exceptions and open questions
 
+Identify channel–audience–intent combinations that are reviewed, tentative,
+or unexplored, including whether reviewed samples exist. Missing samples and
+partial coverage are valid initial states; never invent them to satisfy the
+steady-state target.
+
 Record important contradictions, situational exceptions, weakly supported
 patterns, and questions that still need user review. Remove resolved items and
 update the relevant section.
